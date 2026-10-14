@@ -1,37 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KPI V.2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KPI</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-    html, body {
+    * { box-sizing: border-box; }
+    body {
       margin: 0;
-      padding: 0;
+      background: #171923;
+      color: #e2e8f0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 22px;
+      background: #20232f;
+      border-bottom: 1px solid #343847;
+      font-weight: bold;
+    }
+    header span { color: #50e3a4; margin-right: 8px; }
+    main { height: calc(100vh - 60px); padding: 12px; }
+    iframe {
+      display: block;
       width: 100%;
       height: 100%;
-      overflow: hidden;
-      background-color: #ffffff;
+      border: 1px solid #343847;
+      border-radius: 10px;
+      background: #20232f;
     }
-    iframe {
-      width: 100%;
-      height: 100vh;
-      border: none;
-      display: block;
+    .fallback {
+      padding: 16px;
+      color: #cbd5e1;
+      text-align: center;
     }
+    .fallback a { color: #50e3a4; }
   </style>
 </head>
 <body>
-
-  <!-- Bingkai Web App Google Script -->
-  <iframe 
-    src="https://script.google.com/macros/s/AKfycbxNXnWUSDOJ7A4pwH28hbhh_yzalPx12tJHnYzDTehp1OPDbR1gSmq0pjTmkagleWLE/exec"
-    allow="geolocation; microphone; camera" 
-    allowfullscreen="true">
-  </iframe>
-
+  <header><span>◆</span> KPI Engine Platform</header>
+  <main>
+    <iframe
+      src="https://script.google.com/macros/s/AKfycbxNXnWUSDOJ7A4pwH28hbhh_yzalPx12tJHnYzDTehp1OPDbR1gSmq0pjTmkagleWLE/exec"
+      title="KPI Engine Platform"
+      allow="clipboard-read; clipboard-write"
+      allowfullscreen>
+    </iframe>
+    <noscript>
+      <p class="fallback">Aktifkan JavaScript untuk membuka aplikasi.</p>
+    </noscript>
+  </main>
 </body>
 </html>
